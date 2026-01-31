@@ -1,0 +1,6 @@
+flask
+pymupdf
+Pillow
+pytesseract
+ethiopian-date
+python-telegram-bot

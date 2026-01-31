@@ -1,0 +1,13 @@
+services:
+  - type: worker
+    name: fayda-id-bot
+    runtime: python
+    buildCommand: |
+      apt-get update && apt-get install -y tesseract-ocr
+      pip install -r requirements.txt
+    startCommand: python bot.py
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.10.0
+      - key: TELEGRAM_BOT_TOKEN
+        sync: false # Token kee Dashboard irratti harka keetiin galchita
